@@ -1,0 +1,53 @@
+include ./mix/forms/phone-tip
+
+mixin checkbox
+  label.col-12.col-sm-4.mb-2
+    input.rating_checkbox(type="checkbox", name="rating_checkbox")
+    span.custom-checkbox
+
+mixin rating(id)
+  form(action="", method="post").rating.row.py-2.justify-content-between
+    +checkbox
+    fieldset.rating_rating-stars__fieldset.py-1.me-3.col-12.col-sm-8
+      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="1" id= id + "-1" checked)
+      label(for= id + "-1").rating_rating-stars__label
+        svg.rating_rating-stars__star-icon
+          use(xlink:href='#star-icon')
+      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="2" id= id + "-2")
+      label(for= id + "-2").rating_rating-stars__label
+        svg.rating_rating-stars__star-icon
+          use(xlink:href='#star-icon')
+      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="3" id=id + "-3")
+      label(for= id + "-3").rating_rating-stars__label
+        svg.rating_rating-stars__star-icon
+          use(xlink:href='#star-icon')
+      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="4" id= id + "-4")
+      label(for= id + "-4").rating_rating-stars__label
+        svg.rating_rating-stars__star-icon
+          use(xlink:href='#star-icon')
+      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="5" id= id + "-5")
+      label(for= id + "-5").rating_rating-stars__label
+        svg.rating_rating-stars__star-icon
+          use(xlink:href='#star-icon')
+
+
+mixin iconButton(buttonClassName, iconClassName, iconId, ...attr)
+  button(class=buttonClassName)&attributes(...attr)
+    svg(class=iconClassName)
+      use(xlink:href=iconId)
+
+mixin iconLink(linkClassName, iconClassName, iconId, ...attr)
+  a(class=buttonClassName)&attributes(attr)
+    svg(class=iconClassName)
+      use(xlink:href=iconId)
+
+mixin simpleNav()
+  ul.nav
+    li.nav-item.nav-item_active
+      a(href="#!").nav-link Главная
+    li.nav-item
+      a(href="#!").nav-link Решения
+    li.nav-item
+      a(href="#!").nav-link Ресурсы
+    li.nav-item
+      a(href="#!").nav-link Мой кабинет

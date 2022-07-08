@@ -1,0 +1,18 @@
+extends ./layout/main
+include ./utils/mix
+
+
+block variables
+
+  - var pageTitle = "Webpack + Pug";
+  - var description = "Description for Webpack + Pug"
+  - var pageClass = "my-app"
+
+block header
+  include ./templates/includes/headers/header
+
+block content
+  include ./templates/template
+
+block footer
+  include ./templates/includes/footers/footer

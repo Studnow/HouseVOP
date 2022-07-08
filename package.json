@@ -1,0 +1,47 @@
+{
+  "name": "webpack-5_test",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack serve --config ./config/webpack.dev.js",
+    "server": "node server.js",
+    "build": "webpack --config ./config/webpack.prod.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "micromodal": "^0.4.6",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "autoprefixer": "^10.2.6",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "css-loader": "^5.1.1",
+    "html-webpack-plugin": "^5.2.0",
+    "image-minimizer-webpack-plugin": "^2.2.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^9.0.0",
+    "mini-css-extract-plugin": "^1.5.0",
+    "postcss": "^8.3.0",
+    "postcss-loader": "^5.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "pug": "^3.0.2",
+    "pug-loader": "^2.4.0",
+    "style-loader": "^2.0.0",
+    "tailwindcss": "^2.1.2",
+    "webpack": "^5.36.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3",
+    "windicss-webpack-plugin": "^1.0.0"
+  }
+}

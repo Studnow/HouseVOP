@@ -1,0 +1,25 @@
+mixin card_left-img(img, title, description, author, date, ratingId)
+  article.card_left-img
+    header.card_left-img_header.mb-3
+      .card_left-img_icon
+        svg.icon
+          use(href=img)
+      .card_left-img__text.pe-sm-3.d-flex.flex-column
+        +rating(ratingId)
+        a(href="#!").card_left-img__text__title=title
+        span Автор:
+          span.px-2.card_left-img__text__author=author
+        span Дата:
+          span.px-2.card_left-img__text__date=date
+    p.card_left-img__description= description
+
+mixin card_top-img(cardClass)
+  article.card_top-img(class=cardClass)
+    span.top-img
+      //- img(src="", alt="customer-photo" width='125')
+    .rewiev-slide_text.p-3
+      span.customer-company-name.px-3 Юридическое агентство «Парфёнов и партнёры»
+      span.service-name.mb-3.px-3 Скорость разработки
+      p.customer-rewiev.mb-5.px-3 «Я не мог и представить, что мы сможем своими силами создать настолько сложное приложение за такое короткое время. Я не пытаюсь похвалить себя — эта заслуга dbco».
+      span.customer-name.px-3 Михаил Парфёнов
+      span.customer-company-position.px-3 Основатель

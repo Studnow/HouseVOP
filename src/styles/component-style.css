@@ -1,0 +1,122 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "Raleway", sans-serif;
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: "PlayfairDisplay", serif;
+  src: url(../fonts/PlayfairDisplay-Bold.ttf);
+}
+
+html {
+  font-size: 16px;
+}
+
+@layer base {
+  body {
+    @apply font-text;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-header font-bold text-accent cursor-default;
+  }
+  h1 {
+    @apply text-4xl sm:text-5xl;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  h4 {
+    @apply text-2xl;
+  }
+
+  h5 {
+    @apply text-xl;
+  }
+
+  h6 {
+    @apply text-lg;
+  }
+
+  a {
+    @apply hover:text-accent focus:outline-none focus:text-accent;
+  }
+
+  button {
+    @apply hover:opacity-80 focus:outline-white;
+  }
+  input {
+    @apply focus:outline-accent
+  }
+
+}
+
+.nav-link {
+  @apply text-white hover:text-accent text-base font-normal;
+}
+
+.grid-footer-down {
+  @apply min-h-screen grid grid-rows-stretch;
+}
+.flex-footer-down {
+  @apply min-h-screen flex flex-col;
+}
+
+.flex-col-centered {
+  @apply flex flex-col items-center justify-center;
+}
+.flex-centered {
+  @apply flex items-center justify-center;
+}
+.block {
+  @apply w-full mb-12 p-4;
+}
+.block-1_promo {
+  @apply bg-first bg-top-6 bg-cover min-h-75vh bg-no-repeat;
+}
+.block-4_description {
+  @apply flex flex-col xl:flex-row items-center justify-center gap-8 min-h-50vh bg-watch;
+}
+.block-5_video {
+  @apply min-h-50vh flex-centered;
+}
+
+.gallery-figcaption {
+  @apply self-start bottom-16 pl-8 min-w-max absolute text-3xl cursor-pointer;
+}
+
+.overlay {
+  @apply fixed top-0 left-0 w-full h-full overflow-auto bg-opacity-75 bg-dark;
+}
+
+.modal {
+  @apply hidden;
+}
+.modal.is-open {
+  @apply block;
+}
+
+.dialog {
+  @apply transform translate-x-1/2 translate-y-1/2 scale-100 w-1/2 h-1/2 transition-all delay-1000 duration-1000 bg-white bg-opacity-10;
+}
+.app-footer .nav-list {
+  @apply flex-col gap-3;
+}
+
+.social {
+  @apply w-8 h-6 fill-current
+}

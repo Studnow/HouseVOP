@@ -1,0 +1,12 @@
+- var vid = require('./img/5_video/rain.mp4')
+- var poster = require('./img/5_video/player-preview.png')
+
+article(class="w-1/2 m-0")
+  figure.max-w-5xl.flex-centered.relative
+    video#video.mx-auto(type="video/mp4" muted preload='metadata')
+      source(src=vid, type="video/mp4")
+    button#playpause.rounded-full.text-accent.absolute(class="mx-auto focus:ring-4 focus:ring-dark focus:outline-none" type='button' data-state='play')
+      svg.icon.w-24.h-24
+        use(xlink:href='#play-button')
+    progress#progress.absolute.bottom-0.w-full.h-px(value='0' min='0')
+      span#progress-bar

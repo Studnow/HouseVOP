@@ -1,0 +1,20 @@
+block variables
+
+doctype html
+html(lang='ru')
+  head
+    title= pageTitle
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    meta(name="description", content=description)
+    include ../templates/includes/util-includes/svg-sprite-icons
+  body(class= pageClass)
+    #app.grid-footer-down.bg-dark.text-white.dark
+      header#header.app-header
+        block header
+      main#main.app-content.overflow-hidden
+        block content
+        block aside
+      footer#footer.app-footer.bg-foot.p-8
+        block footer
+      include ../templates/includes/content-sections/gallery-modals
+      //- #modal-overlay.overlay(aria-label="Close modal" tabindex="-1" data-modal-close)

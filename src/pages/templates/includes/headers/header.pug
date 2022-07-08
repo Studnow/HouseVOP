@@ -1,0 +1,8 @@
+block header
+  .container.p-3.w-100.mx-auto.flex.justify-around.items-center
+    block brand
+      include ../brands/brand
+    block nav
+      include ../nav-bars/nav-menu
+    block utils
+      +iconButton('menu w-12 h-12 md:hidden', 'menu_icon pl-2 w-10 h-10 fill-current .text-white hover:text-accent', '#hamburger', {name: 'menu'}, {'aria-label': 'menu-toggler'}, {id: 'menuToggler'})

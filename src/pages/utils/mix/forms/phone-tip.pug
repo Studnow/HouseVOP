@@ -1,0 +1,8 @@
+mixin phone-tip(formW, fieldsetGrid)
+  form(action="" class=formW)
+    fieldset(class=fieldsetGrid)
+      input(type="text" placeholder="Ваше имя").text-center.bg-input.h-12
+      input(type="tel", name="phone" placeholder="Ваш телефон").text-center.bg-input.h-12
+      span.h-12.text-sm.text-center.opacity-70 *Мы никому не передаем ваши данные.
+        pre.text-sm.text-center.font-text И не сохраняем ваш номер в базу.
+      button.h-12.bg-accent Посмотреть район

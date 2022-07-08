@@ -1,0 +1,21 @@
+- var pic1 = require('./img/3_flate-gallery/pic1.png')
+- var pic2 = require('./img/3_flate-gallery/pic2.png')
+
+article.container.relative.mx-auto.flex-centered.flex-wrap(class="gap-12 px-4 pt-24")
+  h2.absolute.top-8.self-start(class="xl:left-20 2xl:left-52") Наши квартиры
+  picture.cursor-pointer.flex-col-centered(class="min-h-25vh min-w-320 xl:w-4/12" data-modal-open="modal-1")
+    figure.flex-col-centered.relative
+      img(src=pic1, alt="q1" class="hover:opacity-60")
+      figcaption.gallery-figcaption.w-full Лофт - 3 этажа
+  picture.cursor-pointer.flex-col-centered(class="min-h-25vh min-w-320 xl:w-4/12" data-modal-open="modal-2")
+    figure.flex-col-centered.relative
+      img(src=pic2, alt="q2" class="hover:opacity-60")
+      figcaption.gallery-figcaption.w-full Лофт - 2 этажа
+  picture.cursor-pointer.flex-col-centered(class="min-h-25vh min-w-320 xl:w-4/12" data-modal-open="modal-3")
+    figure.flex-col-centered.relative
+      img(src=pic1, alt="q3" class="hover:opacity-60")
+      figcaption.gallery-figcaption.w-full Лофт - 3 этажа
+  picture.cursor-pointer.flex-col-centered(class="min-h-25vh min-w-320 xl:w-4/12" data-modal-open="modal-4")
+    figure.flex-col-centered.relative
+      img(src=pic2 alt='q4' class="hover:opacity-60")
+      figcaption.gallery-figcaption.w-full Лофт - 2 этажа
